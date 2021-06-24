@@ -6,8 +6,7 @@
 		$greetings = $_POST['greetings'];
 
         echo $name;
-		
-    
+	
 
 		// include database connection file
 		include_once("db.php");
