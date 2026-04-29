@@ -5,7 +5,7 @@ import PageShell from '../components/PageShell.jsx'
 export default function NotFound() {
   return (
     <>
-      <Seo title="404 | adjie Portfolio" description="Halaman tidak ditemukan." path="/404" />
+      <Seo title="404 | Wahyu adjie prasetyo Portfolio" description="Halaman tidak ditemukan." path="/404" />
       <PageShell compact>
         <section className="mx-auto max-w-2xl text-center">
           <p className="text-sm font-semibold uppercase tracking-[0.22em] text-cyan-600 dark:text-ion">404</p>

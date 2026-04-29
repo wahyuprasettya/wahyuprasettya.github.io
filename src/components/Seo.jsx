@@ -4,7 +4,7 @@ const siteUrl = 'https://example.com'
 const defaultImage = 'https://images.unsplash.com/photo-1462331940025-496dfbfc7564?auto=format&fit=crop&w=1200&q=80'
 
 export default function Seo({
-  title = 'Adjie Portfolio',
+  title = 'Wahyu adjie prasetyo Portfolio',
   description = 'Portfolio modern bertema galaksi untuk frontend engineer yang membangun pengalaman digital cepat, imersif, dan SEO-friendly.',
   keywords = 'portfolio, react developer, three.js, frontend engineer, vite, tailwind css',
   path = '/'

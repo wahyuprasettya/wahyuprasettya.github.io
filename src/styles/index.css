@@ -33,6 +33,58 @@ body::selection {
   backdrop-filter: blur(18px);
 }
 
+.galaxy-card {
+  background:
+    linear-gradient(135deg, rgba(34, 211, 238, 0.9), rgba(139, 92, 246, 0.45) 42%, rgba(249, 115, 22, 0.7));
+}
+
+.galaxy-card::before {
+  content: '';
+  position: absolute;
+  inset: -40%;
+  background: conic-gradient(from 120deg, transparent, rgba(34, 211, 238, 0.24), transparent, rgba(139, 92, 246, 0.22), transparent);
+  opacity: 0;
+  transition: opacity 300ms ease;
+  animation: orbitGlow 9s linear infinite;
+}
+
+.galaxy-card:hover::before {
+  opacity: 1;
+}
+
+.project-stars {
+  background-image:
+    radial-gradient(circle, rgba(255, 255, 255, 0.9) 0 1px, transparent 1.5px),
+    radial-gradient(circle, rgba(34, 211, 238, 0.78) 0 1px, transparent 1.5px);
+  background-position: 0 0, 18px 26px;
+  background-size: 58px 58px, 86px 86px;
+  mask-image: linear-gradient(to bottom, black, transparent 88%);
+}
+
+.project-image-frame::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.13), transparent 38%, rgba(34, 211, 238, 0.12));
+  pointer-events: none;
+}
+
+.project-image-frame::after {
+  content: '';
+  position: absolute;
+  inset: auto 18px 13px 18px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(34, 211, 238, 0.55), transparent);
+  pointer-events: none;
+}
+
+@keyframes orbitGlow {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 .dark .glass {
   border-color: rgba(148, 163, 184, 0.16);
   background: rgba(5, 8, 22, 0.64);

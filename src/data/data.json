@@ -1,8 +1,18 @@
 {
   "profile": {
-    "name": "Adjie",
+    "name": "Wahyu adjie prasetyo",
     "bio": "Frontend engineer yang merancang pengalaman digital cepat, aksesibel, dan imersif dengan React, Three.js, dan sistem desain modern.",
     "image": "/assets/profile-placeholder.svg"
+  },
+  "home": {
+    "heroName": "Wahyu adjie prasetyo"
+  },
+  "about": {
+    "eyebrow": "About",
+    "title": "About Me",
+    "intro": "Halo, saya Wahyu adjie prasetyo. Saya membangun antarmuka yang terasa cepat, tenang, dan hidup untuk produk digital modern.",
+    "detail": "Fokus saya ada pada sistem komponen, animasi yang punya fungsi, visual 3D yang efisien, dan fondasi SEO yang tetap kuat untuk aplikasi React.",
+    "skills": ["React", "Vite", "Tailwind CSS", "Three.js", "Framer Motion", "SEO SPA"]
   },
   "projects": [
     {

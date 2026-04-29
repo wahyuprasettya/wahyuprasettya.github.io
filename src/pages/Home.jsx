@@ -12,7 +12,11 @@ export default function Home() {
 
   return (
     <>
-      <Seo path="/" />
+      <Seo
+        title="Wahyu adjie prasetyo Portfolio | React & Three.js Developer"
+        description={data.profile.bio}
+        path="/"
+      />
       <PageShell>
         <section className="grid min-h-[72vh] items-center gap-10 lg:grid-cols-[1.05fr_0.95fr]">
           <motion.div
@@ -22,7 +26,7 @@ export default function Home() {
           >
             <p className="text-sm font-semibold uppercase tracking-[0.26em] text-cyan-600 dark:text-ion">Space-grade portfolio</p>
             <h1 className="glow-text mt-5 max-w-4xl text-5xl font-extrabold leading-tight sm:text-6xl lg:text-7xl">
-              {data.profile.name}
+              {data.home.heroName}
             </h1>
             <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-700 dark:text-slate-300">{data.profile.bio}</p>
             <div className="mt-9 flex flex-wrap gap-3">

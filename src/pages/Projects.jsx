@@ -10,7 +10,7 @@ export default function Projects() {
   return (
     <>
       <Seo
-        title="Projects | adjie Portfolio"
+        title="Projects | Wahyu adjie prasetyo Portfolio"
         description="Kumpulan project React, dashboard SaaS, dan pengalaman digital bertema futuristik."
         keywords="projects, react portfolio, frontend projects, three.js"
         path="/projects"

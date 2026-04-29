@@ -20,7 +20,7 @@ export default function BlogPost() {
   return (
     <>
       <Seo
-        title={`${post.title} | adjie Portfolio`}
+        title={`${post.title} | Wahyu adjie prasetyo Portfolio`}
         description={post.summary}
         keywords="react, frontend, portfolio, seo, three.js"
         path={`/blog/${post.slug}`}

@@ -2,7 +2,7 @@ import { useMemo, useState } from 'react'
 import Seo from '../components/Seo.jsx'
 import PageShell from '../components/PageShell.jsx'
 import defaultData from '../data/data.json'
-import { createSlug, getPortfolioData, resetPortfolioData, savePortfolioData } from '../utils/portfolioData.js'
+import { createSlug, getPortfolioData, normalizePortfolioData, resetPortfolioData, savePortfolioData } from '../utils/portfolioData.js'
 
 const emptyProject = { title: '', description: '', link: '', image: '/assets/project-nebula.svg' }
 const emptyPost = { title: '', date: new Date().toISOString().slice(0, 10), summary: '', slug: '' }
@@ -16,6 +16,11 @@ export default function Admin() {
   const [projectForm, setProjectForm] = useState(emptyProject)
   const [postForm, setPostForm] = useState(emptyPost)
   const [profileForm, setProfileForm] = useState(data.profile)
+  const [homeForm, setHomeForm] = useState(data.home)
+  const [aboutForm, setAboutForm] = useState({
+    ...data.about,
+    skills: data.about.skills.join(', ')
+  })
   const [editingProjectIndex, setEditingProjectIndex] = useState(null)
   const [editingPostIndex, setEditingPostIndex] = useState(null)
   const [message, setMessage] = useState('')
@@ -25,6 +30,11 @@ export default function Admin() {
   const persistData = (nextData, successMessage) => {
     setData(nextData)
     setProfileForm(nextData.profile)
+    setHomeForm(nextData.home)
+    setAboutForm({
+      ...nextData.about,
+      skills: nextData.about.skills.join(', ')
+    })
     savePortfolioData(nextData)
     setMessage(successMessage)
   }
@@ -32,12 +42,11 @@ export default function Admin() {
   const handleProjectSubmit = (event) => {
     event.preventDefault()
     const nextProjects = [...data.projects]
-    const payload = { ...projectForm }
 
     if (editingProjectIndex === null) {
-      nextProjects.push(payload)
+      nextProjects.push(projectForm)
     } else {
-      nextProjects[editingProjectIndex] = payload
+      nextProjects[editingProjectIndex] = projectForm
     }
 
     persistData({ ...data, projects: nextProjects }, 'Project berhasil disimpan.')
@@ -48,6 +57,24 @@ export default function Admin() {
   const handleProfileSubmit = (event) => {
     event.preventDefault()
     persistData({ ...data, profile: profileForm }, 'Profile berhasil disimpan.')
+  }
+
+  const handleAboutSubmit = (event) => {
+    event.preventDefault()
+    const nextAbout = {
+      ...aboutForm,
+      skills: aboutForm.skills
+        .split(',')
+        .map((skill) => skill.trim())
+        .filter(Boolean)
+    }
+
+    persistData({ ...data, about: nextAbout }, 'About berhasil disimpan.')
+  }
+
+  const handleHomeSubmit = (event) => {
+    event.preventDefault()
+    persistData({ ...data, home: homeForm }, 'Tulisan hero Home berhasil disimpan.')
   }
 
   const handlePostSubmit = (event) => {
@@ -107,7 +134,7 @@ export default function Admin() {
     const reader = new FileReader()
     reader.onload = () => {
       try {
-        const importedData = JSON.parse(reader.result)
+        const importedData = normalizePortfolioData(JSON.parse(reader.result))
         if (!validateData(importedData)) {
           setMessage('Format JSON tidak valid. Pastikan ada profile, projects, dan blog.')
           return
@@ -123,16 +150,22 @@ export default function Admin() {
   }
 
   const resetData = () => {
+    const nextData = normalizePortfolioData(defaultData)
     resetPortfolioData()
-    setData(defaultData)
-    setProfileForm(defaultData.profile)
+    setData(nextData)
+    setProfileForm(nextData.profile)
+    setHomeForm(nextData.home)
+    setAboutForm({
+      ...nextData.about,
+      skills: nextData.about.skills.join(', ')
+    })
     setMessage('Data dikembalikan ke data bawaan.')
   }
 
   return (
     <>
       <Seo
-        title="Admin CMS | adjie Portfolio"
+        title="Admin CMS | Wahyu adjie prasetyo Portfolio"
         description="Mini CMS lokal untuk mengelola project dan blog portfolio."
         keywords="admin portfolio, localStorage CMS, JSON editor"
         path="/admin"
@@ -184,6 +217,76 @@ export default function Admin() {
                 Simpan Profile
               </button>
             </div>
+          </form>
+        </section>
+
+        <section className="glass mb-8 rounded-lg p-5" aria-labelledby="home-form-heading">
+          <h2 id="home-form-heading" className="text-2xl font-bold">Home Hero</h2>
+          <p className="mt-2 text-sm text-slate-700 dark:text-slate-300">
+            Ubah tulisan nama besar yang tampil di halaman utama.
+          </p>
+          <form onSubmit={handleHomeSubmit} className="mt-5 grid gap-4 md:grid-cols-[1fr_auto] md:items-end">
+            <input
+              required
+              value={homeForm.heroName}
+              onChange={(event) => setHomeForm({ ...homeForm, heroName: event.target.value })}
+              placeholder="Tulisan nama hero di Home"
+              className="rounded-lg border border-slate-300 bg-white/85 px-4 py-3 outline-none focus:border-cyan-400 dark:border-white/15 dark:bg-white/10"
+            />
+            <button type="submit" className="w-fit rounded-full bg-cyan-500 px-5 py-3 text-sm font-bold text-slate-950 shadow-glow transition hover:bg-ember">
+              Simpan Hero Home
+            </button>
+          </form>
+        </section>
+
+        <section className="glass mb-8 rounded-lg p-5" aria-labelledby="about-form-heading">
+          <h2 id="about-form-heading" className="text-2xl font-bold">About Content</h2>
+          <p className="mt-2 text-sm text-slate-700 dark:text-slate-300">
+            Edit teks utama yang tampil di halaman About.
+          </p>
+          <form onSubmit={handleAboutSubmit} className="mt-5 grid gap-4">
+            <div className="grid gap-4 md:grid-cols-2">
+              <input
+                required
+                value={aboutForm.eyebrow}
+                onChange={(event) => setAboutForm({ ...aboutForm, eyebrow: event.target.value })}
+                placeholder="Label kecil, contoh: About"
+                className="rounded-lg border border-slate-300 bg-white/85 px-4 py-3 outline-none focus:border-cyan-400 dark:border-white/15 dark:bg-white/10"
+              />
+              <input
+                required
+                value={aboutForm.title}
+                onChange={(event) => setAboutForm({ ...aboutForm, title: event.target.value })}
+                placeholder="Judul, contoh: About Me"
+                className="rounded-lg border border-slate-300 bg-white/85 px-4 py-3 outline-none focus:border-cyan-400 dark:border-white/15 dark:bg-white/10"
+              />
+            </div>
+            <textarea
+              required
+              value={aboutForm.intro}
+              onChange={(event) => setAboutForm({ ...aboutForm, intro: event.target.value })}
+              placeholder="Paragraf pembuka About"
+              rows="4"
+              className="rounded-lg border border-slate-300 bg-white/85 px-4 py-3 outline-none focus:border-cyan-400 dark:border-white/15 dark:bg-white/10"
+            />
+            <textarea
+              required
+              value={aboutForm.detail}
+              onChange={(event) => setAboutForm({ ...aboutForm, detail: event.target.value })}
+              placeholder="Paragraf detail/fokus"
+              rows="4"
+              className="rounded-lg border border-slate-300 bg-white/85 px-4 py-3 outline-none focus:border-cyan-400 dark:border-white/15 dark:bg-white/10"
+            />
+            <input
+              required
+              value={aboutForm.skills}
+              onChange={(event) => setAboutForm({ ...aboutForm, skills: event.target.value })}
+              placeholder="Skills, pisahkan dengan koma. Contoh: React, QA, Laravel"
+              className="rounded-lg border border-slate-300 bg-white/85 px-4 py-3 outline-none focus:border-cyan-400 dark:border-white/15 dark:bg-white/10"
+            />
+            <button type="submit" className="w-fit rounded-full bg-cyan-500 px-5 py-3 text-sm font-bold text-slate-950 shadow-glow transition hover:bg-ember">
+              Simpan About
+            </button>
           </form>
         </section>
 

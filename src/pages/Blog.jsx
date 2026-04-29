@@ -11,7 +11,7 @@ export default function Blog() {
   return (
     <>
       <Seo
-        title="Blog | adjie Portfolio"
+        title="Blog | Wahyu adjie prasetyo Portfolio"
         description="Artikel tentang React, Three.js, performa frontend, SEO SPA, dan desain UI bertema galaksi."
         keywords="blog react, three.js, seo spa, frontend performance"
         path="/blog"

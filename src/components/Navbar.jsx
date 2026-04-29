@@ -12,7 +12,7 @@ export default function Navbar() {
       <nav className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-3 px-4 py-4 sm:px-6 lg:px-8" aria-label="Primary navigation">
         <Link to="/" className="group flex items-center gap-3 font-bold tracking-wide">
           <span className="h-3 w-3 rounded-full bg-ion shadow-glow transition group-hover:bg-ember" aria-hidden="true" />
-          <span className="glow-text">adjie</span>
+          <span className="glow-text">Wahyu adjie prasetyo</span>
         </Link>
 
         <div className="flex flex-wrap items-center justify-end gap-1.5 sm:gap-4">

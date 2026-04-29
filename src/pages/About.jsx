@@ -3,16 +3,14 @@ import PageShell from '../components/PageShell.jsx'
 import SectionReveal from '../components/SectionReveal.jsx'
 import usePortfolioData from '../hooks/usePortfolioData.js'
 
-const skills = ['React', 'Vite', 'Tailwind CSS', 'Three.js', 'Framer Motion', 'SEO SPA']
-
 export default function About() {
   const data = usePortfolioData()
 
   return (
     <>
       <Seo
-        title="About | adjie Portfolio"
-        description="Profil frontend engineer yang berfokus pada React, Three.js, performa, aksesibilitas, dan SEO."
+        title="About | Wahyu adjie prasetyo Portfolio"
+        description={`${data.about.intro} ${data.about.detail}`}
         keywords="about, frontend engineer, react developer, portfolio"
         path="/about"
       />
@@ -34,16 +32,16 @@ export default function About() {
             </article>
 
             <div>
-              <p className="text-sm font-semibold uppercase tracking-[0.22em] text-cyan-600 dark:text-ion">About</p>
-              <h1 id="about-me-heading" className="glow-text mt-4 text-4xl font-extrabold sm:text-5xl">About Me</h1>
+              <p className="text-sm font-semibold uppercase tracking-[0.22em] text-cyan-600 dark:text-ion">{data.about.eyebrow}</p>
+              <h1 id="about-me-heading" className="glow-text mt-4 text-4xl font-extrabold sm:text-5xl">{data.about.title}</h1>
               <p className="mt-6 text-lg leading-8 text-slate-700 dark:text-slate-300">
-                Halo, saya {data.profile.name}. Saya membangun antarmuka yang terasa cepat, tenang, dan hidup untuk produk digital modern.
+                {data.about.intro}
               </p>
               <p className="mt-5 leading-8 text-slate-700 dark:text-slate-300">
-                Fokus saya ada pada sistem komponen, animasi yang punya fungsi, visual 3D yang efisien, dan fondasi SEO yang tetap kuat untuk aplikasi React.
+                {data.about.detail}
               </p>
               <div className="mt-8 flex flex-wrap gap-3">
-                {skills.map((skill) => (
+                {data.about.skills.map((skill) => (
                   <span key={skill} className="rounded-full border border-cyan-500/35 px-4 py-2 text-sm font-semibold dark:bg-white/5">
                     {skill}
                   </span>
