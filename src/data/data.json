@@ -1,57 +1,37 @@
 {
   "profile": {
-    "name": "Wahyu adjie prasetyo",
-    "bio": "Frontend engineer yang merancang pengalaman digital cepat, aksesibel, dan imersif dengan React, Three.js, dan sistem desain modern.",
-    "image": "/assets/profile-placeholder.svg"
-  },
-  "home": {
-    "heroName": "Wahyu adjie prasetyo"
-  },
-  "about": {
-    "eyebrow": "About",
-    "title": "About Me",
-    "intro": "Halo, saya Wahyu adjie prasetyo. Saya membangun antarmuka yang terasa cepat, tenang, dan hidup untuk produk digital modern.",
-    "detail": "Fokus saya ada pada sistem komponen, animasi yang punya fungsi, visual 3D yang efisien, dan fondasi SEO yang tetap kuat untuk aplikasi React.",
-    "skills": ["React", "Vite", "Tailwind CSS", "Three.js", "Framer Motion", "SEO SPA"]
+    "name": "Wahyu Adjie Prasetyo",
+    "bio": "Wahyu Adjie Prasetyo adalah seorang IT enthusiast dengan keahlian dalam pengembangan aplikasi dan Quality Assurance. Berpengalaman dalam menulis kode yang efisien serta melakukan pengujian untuk memastikan kualitas software, ia terbiasa bekerja secara detail dan sistematis. Memiliki ketertarikan pada teknologi modern dan selalu berusaha meningkatkan skill di bidang software development.",
+    "image": "https://www.shutterstock.com/image-vector/3d-vector-cartoon-illustration-flying-600nw-2652742577.jpg"
   },
   "projects": [
     {
-      "title": "Nebula Commerce",
-      "description": "Dashboard e-commerce futuristik dengan insight penjualan real-time, visualisasi metrik, dan UI operasional yang responsif.",
-      "link": "https://example.com/projects/nebula-commerce",
-      "image": "/assets/project-nebula.svg"
+      "title": "Kedai Tengger APP",
+      "description": "☕ Aplikasi Order Kedai (QR Code)\n\nAplikasi pemesanan di kedai menggunakan QR Code untuk mempermudah pelanggan. Pengunjung cukup scan QR di meja, lalu langsung melihat menu dan memilih pesanan melalui smartphone.\n\nPesanan akan otomatis masuk ke sistem kasir, kemudian kasir memproses pembayaran dan meneruskan order ke dapur.\n\nFokus: kemudahan, efisiensi, dan pengalaman pengguna yang lebih cepat tanpa antrian",
+      "link": "https://qrcode-menu-blond.vercel.app/",
+      "image": "https://qrcode-menu-blond.vercel.app/_next/image?url=%2Flogo-kedai.png&w=256&q=75"
     },
     {
-      "title": "Orbit Analytics",
-      "description": "Aplikasi analitik SaaS untuk memantau funnel, cohort, dan retensi pengguna dalam antarmuka gelap yang hemat fokus.",
-      "link": "https://example.com/projects/orbit-analytics",
-      "image": "/assets/project-orbit.svg"
-    },
-    {
-      "title": "Cosmic Notes",
-      "description": "Workspace personal berbasis React untuk menulis, mengorganisasi, dan mencari catatan dengan animasi mikro yang halus.",
-      "link": "https://example.com/projects/cosmic-notes",
-      "image": "/assets/project-cosmic.svg"
+      "title": "Excelso Coffee APP",
+      "description": "Aplikasi Excelso adalah aplikasi Mobile resmi dari brand kopi Excelso yang digunakan untuk membership, pembayaran, dan pemesanan menu.\n\n📱 Penjelasan Sederhana\n\nAplikasi ini bukan sekadar lihat menu, tapi lebih ke aplikasi pelanggan (customer app) untuk:\n\nMenyimpan saldo (seperti e-wallet khusus Excelso)\nMendapat promo & reward\nMelihat riwayat transaksi\nOrder menu (pickup / delivery)\naplikasi ini saya develop sewaktu saya masih bekerja di Ravintola",
+      "link": "https://play.google.com/store/apps/details?id=id.web.ravintola.excelsocrm&hl=id&pli=1",
+      "image": "https://excelso-coffee.com/images/logo.png"
     }
   ],
-  "blog": [
-    {
-      "title": "Membangun UI Galaksi dengan React",
-      "date": "2026-02-12",
-      "summary": "Catatan desain tentang membuat tema luar angkasa yang tetap clean, cepat, dan mudah dibaca.",
-      "slug": "membangun-ui-galaksi-dengan-react"
-    },
-    {
-      "title": "Optimasi Performa Three.js di SPA",
-      "date": "2026-03-04",
-      "summary": "Strategi resize handler, dispose resource, dan lazy loading agar background 3D tetap ringan.",
-      "slug": "optimasi-performa-threejs-di-spa"
-    },
-    {
-      "title": "SEO untuk Single Page Application",
-      "date": "2026-03-28",
-      "summary": "Checklist meta tags, Open Graph, sitemap, robots, dan struktur semantic HTML untuk React SPA.",
-      "slug": "seo-untuk-single-page-application"
-    }
-  ]
+  "blog": [],
+  "about": {
+    "eyebrow": "About",
+    "title": "About Me",
+    "intro": "Halo, saya Wahyu Adjie Prasetyo.adalah seorang IT enthusiast dengan keahlian dalam pengembangan aplikasi dan Quality Assurance. ",
+    "detail": "Berpengalaman dalam menulis kode yang efisien serta melakukan pengujian untuk memastikan kualitas software, ia terbiasa bekerja secara detail dan sistematis. Memiliki ketertarikan pada teknologi modern dan selalu berusaha meningkatkan skill di bidang software development.",
+    "skills": [
+      "React",
+      "Vite",
+      "Tailwind CSS",
+      "React Native"
+    ]
+  },
+  "home": {
+    "heroName": "Wahyu Adjie prasetyo"
+  }
 }
