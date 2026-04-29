@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+  scroll-behavior: smooth;
+}
+
+.dark {
+  color-scheme: dark;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  overflow-x: hidden;
+}
+
+body::selection {
+  background: rgba(34, 211, 238, 0.35);
+}
+
+.glow-text {
+  text-shadow: 0 0 18px rgba(34, 211, 238, 0.42), 0 0 34px rgba(139, 92, 246, 0.26);
+}
+
+.glass {
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(18px);
+}
+
+.dark .glass {
+  border-color: rgba(148, 163, 184, 0.16);
+  background: rgba(5, 8, 22, 0.64);
+}
+
+.shooting-star {
+  position: fixed;
+  top: 12%;
+  left: -12rem;
+  z-index: 0;
+  width: 10rem;
+  height: 2px;
+  pointer-events: none;
+  background: linear-gradient(90deg, transparent, rgba(34, 211, 238, 0.95), transparent);
+  filter: drop-shadow(0 0 10px rgba(34, 211, 238, 0.8));
+  animation: shoot 6.5s linear infinite;
+}
+
+@keyframes shoot {
+  0%, 58% {
+    transform: translate3d(0, 0, 0) rotate(-18deg);
+    opacity: 0;
+  }
+  62% {
+    opacity: 1;
+  }
+  78%, 100% {
+    transform: translate3d(125vw, 42vh, 0) rotate(-18deg);
+    opacity: 0;
+  }
+}
+
+@media (pointer: coarse) {
+  .custom-cursor {
+    display: none;
+  }
+}

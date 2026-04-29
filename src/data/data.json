@@ -1,0 +1,47 @@
+{
+  "profile": {
+    "name": "Adjie",
+    "bio": "Frontend engineer yang merancang pengalaman digital cepat, aksesibel, dan imersif dengan React, Three.js, dan sistem desain modern.",
+    "image": "/assets/profile-placeholder.svg"
+  },
+  "projects": [
+    {
+      "title": "Nebula Commerce",
+      "description": "Dashboard e-commerce futuristik dengan insight penjualan real-time, visualisasi metrik, dan UI operasional yang responsif.",
+      "link": "https://example.com/projects/nebula-commerce",
+      "image": "/assets/project-nebula.svg"
+    },
+    {
+      "title": "Orbit Analytics",
+      "description": "Aplikasi analitik SaaS untuk memantau funnel, cohort, dan retensi pengguna dalam antarmuka gelap yang hemat fokus.",
+      "link": "https://example.com/projects/orbit-analytics",
+      "image": "/assets/project-orbit.svg"
+    },
+    {
+      "title": "Cosmic Notes",
+      "description": "Workspace personal berbasis React untuk menulis, mengorganisasi, dan mencari catatan dengan animasi mikro yang halus.",
+      "link": "https://example.com/projects/cosmic-notes",
+      "image": "/assets/project-cosmic.svg"
+    }
+  ],
+  "blog": [
+    {
+      "title": "Membangun UI Galaksi dengan React",
+      "date": "2026-02-12",
+      "summary": "Catatan desain tentang membuat tema luar angkasa yang tetap clean, cepat, dan mudah dibaca.",
+      "slug": "membangun-ui-galaksi-dengan-react"
+    },
+    {
+      "title": "Optimasi Performa Three.js di SPA",
+      "date": "2026-03-04",
+      "summary": "Strategi resize handler, dispose resource, dan lazy loading agar background 3D tetap ringan.",
+      "slug": "optimasi-performa-threejs-di-spa"
+    },
+    {
+      "title": "SEO untuk Single Page Application",
+      "date": "2026-03-28",
+      "summary": "Checklist meta tags, Open Graph, sitemap, robots, dan struktur semantic HTML untuk React SPA.",
+      "slug": "seo-untuk-single-page-application"
+    }
+  ]
+}
