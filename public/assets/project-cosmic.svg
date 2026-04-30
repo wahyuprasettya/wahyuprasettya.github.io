@@ -1,7 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" role="img" aria-label="Cosmic notes project placeholder">
-  <rect width="1200" height="720" fill="#080b18"/>
-  <rect x="180" y="120" width="300" height="430" rx="18" fill="#111827" stroke="#22d3ee" stroke-opacity="0.35"/>
-  <rect x="520" y="120" width="500" height="430" rx="18" fill="#111827" stroke="#8b5cf6" stroke-opacity="0.45"/>
-  <path d="M230 205h190M230 270h130M230 335h175M575 210h360M575 285h290M575 360h330M575 435h230" stroke="#dbeafe" stroke-width="18" stroke-linecap="round" opacity="0.8"/>
-  <circle cx="965" cy="160" r="44" fill="#f97316" opacity="0.8"/>
-</svg>

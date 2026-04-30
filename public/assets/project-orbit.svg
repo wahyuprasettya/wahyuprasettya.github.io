@@ -1,7 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" role="img" aria-label="Orbit project placeholder">
-  <rect width="1200" height="720" fill="#06111f"/>
-  <rect x="130" y="110" width="940" height="500" rx="24" fill="#0f172a" stroke="#22d3ee" stroke-opacity="0.35"/>
-  <path d="M210 475l155-128 118 72 168-180 138 110 194-160" fill="none" stroke="#22d3ee" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M210 545h760" stroke="#475569" stroke-width="12" stroke-linecap="round"/>
-  <circle cx="820" cy="210" r="88" fill="#8b5cf6" opacity="0.72"/>
-</svg>
