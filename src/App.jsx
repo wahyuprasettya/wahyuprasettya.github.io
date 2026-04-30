@@ -2,6 +2,7 @@ import { lazy, Suspense, useEffect } from 'react'
 import { Route, Routes } from 'react-router-dom'
 import Navbar from './components/Navbar.jsx'
 import CustomCursor from './components/CustomCursor.jsx'
+import CookieNotice from './components/CookieNotice.jsx'
 import Home from './pages/Home.jsx'
 import Blog from './pages/Blog.jsx'
 import BlogPost from './pages/BlogPost.jsx'
@@ -25,6 +26,7 @@ export default function App() {
       </Suspense>
       <CustomCursor />
       <Navbar />
+      <CookieNotice />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/blog" element={<Blog />} />

@@ -29,7 +29,50 @@
       "Vite",
       "Tailwind CSS",
       "React Native"
-    ]
+    ],
+    "career": {
+      "eyebrow": "Career Path",
+      "title": "Rocket Launch Timeline",
+      "intro": "Setiap fase peluncuran membuka catatan pendidikan dan pengalaman kerja yang membentuk cara saya membangun produk digital hari ini.",
+      "items": [
+        {
+          "type": "education",
+          "phase": "Ignition",
+          "title": "Teknik Informatika",
+          "organization": "STMIK AMIKOM Yogyakarta",
+          "period": "2015 - 2019",
+          "location": "Yogyakarta",
+          "summary": "Mempelajari dasar rekayasa perangkat lunak, basis data, logika pemrograman, dan cara menyusun solusi yang rapi untuk kebutuhan pengguna."
+        },
+        {
+          "type": "work",
+          "phase": "Lift-off",
+          "title": "QA Engineer",
+          "organization": "Ravintola",
+          "period": "2019 - 2022",
+          "location": "Indonesia",
+          "summary": "Menangani quality assurance untuk memastikan alur produk tetap stabil, akurat, dan siap dipakai sebelum rilis ke pengguna."
+        },
+        {
+          "type": "work",
+          "phase": "Stage Separation",
+          "title": "Mobile App Developer",
+          "organization": "Ravintola",
+          "period": "2022 - 2023",
+          "location": "Indonesia",
+          "summary": "Ikut mengembangkan aplikasi digital yang menghubungkan kebutuhan bisnis, pengalaman pelanggan, dan implementasi teknis di lapangan."
+        },
+        {
+          "type": "work",
+          "phase": "Orbit",
+          "title": "Frontend Developer",
+          "organization": "Freelance & Product Collaboration",
+          "period": "2023 - Sekarang",
+          "location": "Remote",
+          "summary": "Fokus membangun UI yang modern, cepat, dan mudah dipelihara, dengan perhatian besar pada usability, performa, dan kualitas rilis."
+        }
+      ]
+    }
   },
   "home": {
     "heroName": "Wahyu Adjie prasetyo"

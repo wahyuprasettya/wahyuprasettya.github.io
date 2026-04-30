@@ -86,6 +86,255 @@ body::selection {
   }
 }
 
+.career-launch {
+  border: 1px solid rgba(103, 232, 249, 0.2);
+  background:
+    radial-gradient(circle at top, rgba(56, 189, 248, 0.18), transparent 26%),
+    radial-gradient(circle at 78% 18%, rgba(249, 115, 22, 0.16), transparent 18%),
+    linear-gradient(180deg, rgba(3, 7, 18, 0.96), rgba(8, 18, 38, 0.97) 48%, rgba(13, 29, 56, 0.98));
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06), 0 30px 80px rgba(2, 6, 23, 0.45);
+}
+
+.career-launch__nebula,
+.career-launch__stars {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.career-launch__nebula {
+  background:
+    radial-gradient(circle at 20% 22%, rgba(34, 211, 238, 0.1), transparent 20%),
+    radial-gradient(circle at 78% 34%, rgba(249, 115, 22, 0.12), transparent 22%),
+    radial-gradient(circle at 52% 72%, rgba(59, 130, 246, 0.14), transparent 28%);
+  filter: blur(10px);
+}
+
+.career-launch__stars {
+  background-image:
+    radial-gradient(circle, rgba(255, 255, 255, 0.95) 0 1px, transparent 1.5px),
+    radial-gradient(circle, rgba(103, 232, 249, 0.72) 0 1px, transparent 1.6px);
+  background-position: 0 0, 22px 26px;
+  background-size: 92px 92px, 128px 128px;
+  opacity: 0.45;
+}
+
+.career-launch__axis {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 2px;
+  transform: translateX(-50%);
+  background: linear-gradient(180deg, rgba(34, 211, 238, 0.16), rgba(125, 211, 252, 0.88), rgba(249, 115, 22, 0.34));
+  box-shadow: 0 0 24px rgba(34, 211, 238, 0.25);
+}
+
+.career-rocket {
+  position: absolute;
+  left: 50%;
+  z-index: 2;
+  width: 82px;
+  margin-left: -41px;
+  transform: translateY(-50%);
+}
+
+.career-rocket__body {
+  position: relative;
+  width: 44px;
+  height: 92px;
+  margin: 0 auto;
+  border: 1px solid rgba(186, 230, 253, 0.5);
+  border-radius: 999px 999px 16px 16px;
+  background: linear-gradient(180deg, rgba(248, 250, 252, 0.98), rgba(191, 219, 254, 0.88) 52%, rgba(56, 189, 248, 0.82));
+  box-shadow: inset 0 -8px 20px rgba(14, 116, 144, 0.24);
+}
+
+.career-rocket__body::before {
+  content: '';
+  position: absolute;
+  inset: 10px 9px auto;
+  height: 18px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, rgba(14, 165, 233, 0.28), rgba(255, 255, 255, 0.95), rgba(14, 165, 233, 0.28));
+}
+
+.career-rocket__window {
+  position: absolute;
+  top: 28px;
+  left: 50%;
+  width: 16px;
+  height: 16px;
+  margin-left: -8px;
+  border: 2px solid rgba(2, 6, 23, 0.22);
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.92), rgba(34, 211, 238, 0.82));
+}
+
+.career-rocket__wing {
+  position: absolute;
+  bottom: 12px;
+  width: 16px;
+  height: 28px;
+  background: linear-gradient(180deg, rgba(248, 113, 113, 0.95), rgba(234, 88, 12, 0.88));
+}
+
+.career-rocket__wing--left {
+  left: -10px;
+  border-radius: 16px 0 12px 16px;
+  transform: skewY(18deg);
+}
+
+.career-rocket__wing--right {
+  right: -10px;
+  border-radius: 0 16px 16px 12px;
+  transform: skewY(-18deg);
+}
+
+.career-rocket__flame {
+  display: block;
+  width: 18px;
+  height: 48px;
+  margin: -2px auto 0;
+  border-radius: 999px;
+  background: linear-gradient(180deg, rgba(251, 191, 36, 0.96), rgba(249, 115, 22, 0.95), rgba(251, 146, 60, 0.1));
+  filter: blur(0.2px);
+  transform-origin: top center;
+  animation: rocketFlame 1s ease-in-out infinite;
+}
+
+.career-milestone {
+  position: relative;
+  width: min(100%, 30rem);
+}
+
+.career-milestone--left {
+  justify-self: start;
+  padding-right: 3.5rem;
+}
+
+.career-milestone--right {
+  justify-self: end;
+  padding-left: 3.5rem;
+}
+
+.career-milestone__pin {
+  position: absolute;
+  top: 2.3rem;
+  width: 3.5rem;
+  height: 2px;
+  background: linear-gradient(90deg, rgba(34, 211, 238, 0.16), rgba(103, 232, 249, 0.85));
+}
+
+.career-milestone--left .career-milestone__pin {
+  right: 0;
+}
+
+.career-milestone--right .career-milestone__pin {
+  left: 0;
+  background: linear-gradient(90deg, rgba(103, 232, 249, 0.85), rgba(34, 211, 238, 0.16));
+}
+
+.career-milestone__pin span {
+  position: absolute;
+  top: 50%;
+  width: 14px;
+  height: 14px;
+  margin-top: -7px;
+  border: 2px solid rgba(165, 243, 252, 0.55);
+  border-radius: 50%;
+  background: rgba(2, 6, 23, 0.95);
+  box-shadow: 0 0 0 8px rgba(34, 211, 238, 0.08);
+}
+
+.career-milestone--left .career-milestone__pin span {
+  right: -7px;
+}
+
+.career-milestone--right .career-milestone__pin span {
+  left: -7px;
+}
+
+.career-milestone__card {
+  border: 1px solid rgba(186, 230, 253, 0.14);
+  border-radius: 24px;
+  background: linear-gradient(180deg, rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.72));
+  padding: 1.5rem;
+  box-shadow: 0 18px 50px rgba(2, 6, 23, 0.3);
+  transition: transform 250ms ease, border-color 250ms ease, box-shadow 250ms ease;
+}
+
+.career-milestone--active .career-milestone__card {
+  transform: translateY(-6px);
+  border-color: rgba(103, 232, 249, 0.36);
+  box-shadow: 0 22px 64px rgba(8, 47, 73, 0.34);
+}
+
+.career-milestone__meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.career-order {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 4.2rem;
+  border: 1px solid rgba(125, 211, 252, 0.24);
+  border-radius: 999px;
+  padding: 0.45rem 0.8rem;
+  background: rgba(125, 211, 252, 0.08);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgb(224 242 254);
+}
+
+.career-chip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 6rem;
+  border-radius: 999px;
+  padding: 0.45rem 0.9rem;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.career-chip--work {
+  background: rgba(34, 211, 238, 0.15);
+  color: rgb(165 243 252);
+}
+
+.career-chip--education {
+  background: rgba(249, 115, 22, 0.14);
+  color: rgb(253 186 116);
+}
+
+.career-milestone__phase {
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(226, 232, 240, 0.7);
+}
+
+@keyframes rocketFlame {
+  0%, 100% {
+    transform: scaleY(0.82);
+    opacity: 0.82;
+  }
+  50% {
+    transform: scaleY(1.12);
+    opacity: 1;
+  }
+}
+
 .dark .glass {
   border-color: rgba(148, 163, 184, 0.16);
   background: rgba(5, 8, 22, 0.64);
@@ -121,5 +370,61 @@ body::selection {
 @media (pointer: coarse) {
   .custom-cursor {
     display: none;
+  }
+}
+
+@media (max-width: 1023px) {
+  .career-launch__axis {
+    left: 1.5rem;
+    transform: none;
+  }
+
+  .career-rocket {
+    left: 1.5rem;
+    margin-left: -41px;
+  }
+
+  .career-milestone,
+  .career-milestone--left,
+  .career-milestone--right {
+    justify-self: stretch;
+    width: 100%;
+    padding-left: 3.75rem;
+    padding-right: 0;
+  }
+
+  .career-milestone__pin,
+  .career-milestone--left .career-milestone__pin,
+  .career-milestone--right .career-milestone__pin {
+    left: 0;
+    right: auto;
+    background: linear-gradient(90deg, rgba(103, 232, 249, 0.85), rgba(34, 211, 238, 0.16));
+  }
+
+  .career-milestone__pin span,
+  .career-milestone--left .career-milestone__pin span,
+  .career-milestone--right .career-milestone__pin span {
+    left: -7px;
+    right: auto;
+  }
+}
+
+@media (max-width: 639px) {
+  .career-launch {
+    border-radius: 24px;
+  }
+
+  .career-rocket {
+    width: 70px;
+    margin-left: -35px;
+  }
+
+  .career-rocket__body {
+    width: 38px;
+    height: 78px;
+  }
+
+  .career-milestone__card {
+    padding: 1.25rem;
   }
 }

@@ -1,6 +1,7 @@
 import Seo from '../components/Seo.jsx'
 import PageShell from '../components/PageShell.jsx'
 import SectionReveal from '../components/SectionReveal.jsx'
+import CareerPathSection from '../components/CareerPathSection.jsx'
 import usePortfolioData from '../hooks/usePortfolioData.js'
 
 export default function About() {
@@ -49,6 +50,8 @@ export default function About() {
               </div>
             </div>
           </section>
+
+          <CareerPathSection career={data.about.career} />
         </SectionReveal>
       </PageShell>
     </>
