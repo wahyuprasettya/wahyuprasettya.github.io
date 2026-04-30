@@ -1,0 +1,37 @@
+{
+  "profile": {
+    "name": "Wahyu Adjie Prasetyo",
+    "bio": "Wahyu Adjie Prasetyo adalah seorang IT enthusiast dengan keahlian dalam pengembangan aplikasi dan Quality Assurance. Berpengalaman dalam menulis kode yang efisien serta melakukan pengujian untuk memastikan kualitas software, ia terbiasa bekerja secara detail dan sistematis. Memiliki ketertarikan pada teknologi modern dan selalu berusaha meningkatkan skill di bidang software development.",
+    "image": "https://www.shutterstock.com/image-vector/3d-vector-cartoon-illustration-flying-600nw-2652742577.jpg"
+  },
+  "projects": [
+    {
+      "title": "Kedai Tengger APP",
+      "description": "☕ Aplikasi Order Kedai (QR Code)\n\nAplikasi pemesanan di kedai menggunakan QR Code untuk mempermudah pelanggan. Pengunjung cukup scan QR di meja, lalu langsung melihat menu dan memilih pesanan melalui smartphone.\n\nPesanan akan otomatis masuk ke sistem kasir, kemudian kasir memproses pembayaran dan meneruskan order ke dapur.\n\nFokus: kemudahan, efisiensi, dan pengalaman pengguna yang lebih cepat tanpa antrian",
+      "link": "https://qrcode-menu-blond.vercel.app/",
+      "image": "https://qrcode-menu-blond.vercel.app/_next/image?url=%2Flogo-kedai.png&w=256&q=75"
+    },
+    {
+      "title": "Excelso Coffee APP",
+      "description": "Aplikasi Excelso adalah aplikasi Mobile resmi dari brand kopi Excelso yang digunakan untuk membership, pembayaran, dan pemesanan menu.\n\n📱 Penjelasan Sederhana\n\nAplikasi ini bukan sekadar lihat menu, tapi lebih ke aplikasi pelanggan (customer app) untuk:\n\nMenyimpan saldo (seperti e-wallet khusus Excelso)\nMendapat promo & reward\nMelihat riwayat transaksi\nOrder menu (pickup / delivery)\naplikasi ini saya develop sewaktu saya masih bekerja di Ravintola",
+      "link": "https://play.google.com/store/apps/details?id=id.web.ravintola.excelsocrm&hl=id&pli=1",
+      "image": "https://excelso-coffee.com/images/logo.png"
+    }
+  ],
+  "blog": [],
+  "about": {
+    "eyebrow": "About",
+    "title": "About Me",
+    "intro": "Halo, saya Wahyu Adjie Prasetyo.adalah seorang IT enthusiast dengan keahlian dalam pengembangan aplikasi dan Quality Assurance. ",
+    "detail": "Berpengalaman dalam menulis kode yang efisien serta melakukan pengujian untuk memastikan kualitas software, ia terbiasa bekerja secara detail dan sistematis. Memiliki ketertarikan pada teknologi modern dan selalu berusaha meningkatkan skill di bidang software development.",
+    "skills": [
+      "React",
+      "Vite",
+      "Tailwind CSS",
+      "React Native"
+    ]
+  },
+  "home": {
+    "heroName": "Wahyu Adjie prasetyo"
+  }
+}
